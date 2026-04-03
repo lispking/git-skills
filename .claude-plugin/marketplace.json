@@ -7,7 +7,7 @@
   "plugins": [
     {
       "id": "git-skills",
-      "name": "Git Skills",
+      "name": "git-skills",
       "version": "1.0.0",
       "description": "A powerful Git assistant skill with expert-level commit messages, branch management, and workflow guidance",
       "author": {
@@ -16,10 +16,8 @@
       },
       "license": "MIT",
       "homepage": "https://github.com/lispking/git-skills",
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/lispking/git-skills.git"
-      },
+      "repository": "https://github.com/lispking/git-skills.git",
+      "source": "https://github.com/lispking/git-skills.git",
       "icon": "🌿",
       "tags": ["git", "version-control", "productivity", "workflow", "commit-convention"],
       "categories": ["productivity", "developer-tools"],
