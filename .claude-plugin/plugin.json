@@ -1,30 +1,21 @@
 {
   "name": "git-skills",
   "version": "1.0.0",
-  "description": "A comprehensive Git assistant skill that provides intelligent branch management, commit message conventions, workflow assistance, and code review guidance",
-  "author": "lispking",
-  "license": "MIT",
-  "homepage": "https://github.com/lispking/git-skills",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lispking/git-skills.git"
+  "description": "Claude Code plugin for Git skills with expert-level commit messages, branch management, and workflow guidance.",
+  "author": {
+    "name": "lispking",
+    "url": "https://github.com/lispking"
   },
-  "keywords": ["git", "version-control", "workflow", "commit", "branch", "pr"],
-  "categories": ["productivity", "developer-tools"],
-  "entry": "skills/git/SKILL.md",
-  "skills": [
-    "skills/git"
-  ],
-  "triggers": [
+  "repository": "https://github.com/lispking/git-skills",
+  "homepage": "https://github.com/lispking/git-skills",
+  "license": "MIT",
+  "keywords": [
     "git",
+    "version-control",
+    "claude-code",
+    "skill",
+    "workflow",
     "commit",
-    "branch",
-    "merge",
-    "rebase",
-    "push",
-    "pull",
-    "checkout",
-    "pull request",
-    "pr "
+    "branch"
   ]
 }
