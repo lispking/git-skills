@@ -63,18 +63,24 @@ Show recent commit statistics
 ```
 <type>(<scope>): <subject>
 
-<body>
+<body paragraph 1: what changed and why>
+
+<body paragraph 2: implementation details, considerations>
 
 <footer>
 ```
 
 **Expert-level requirements:**
 - Subject: specific, imperative mood, max 50 chars, no period
-- Body: **mandatory** for non-trivial changes, explains WHAT and WHY
+- Body: **mandatory multi-paragraph** for all non-trivial changes
+  - Paragraph 1: explain WHAT changed and WHY (motivation)
+  - Paragraph 2: key implementation details, trade-offs, breaking changes
+  - Use blank lines to separate paragraphs
 - Include: problem context, approach rationale, side effects, breaking changes
 - Footer: issue references, breaking change notices
 - **NO** `Co-Authored-By:` signatures
 - **NO** AI-generated signatures
+- **NO** single-sentence commit messages
 
 ## Branch Naming Convention
 
