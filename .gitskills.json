@@ -1,0 +1,27 @@
+{
+  "commit": {
+    "types": ["feat", "fix", "docs", "style", "refactor", "test", "chore", "perf", "ci"],
+    "scopes": ["api", "ui", "auth", "db", "config", "deps"],
+    "requireScope": false,
+    "maxSubjectLength": 50,
+    "maxBodyLength": 72
+  },
+  "branch": {
+    "mainBranch": "main",
+    "devBranch": "develop",
+    "namingPattern": "{type}/{ticket-id}-{description}",
+    "protectedBranches": ["main", "master", "develop"]
+  },
+  "workflow": {
+    "prTemplate": ".github/pull_request_template.md",
+    "autoSync": true,
+    "requireLinearHistory": false
+  },
+  "hooks": {
+    "preCommit": {
+      "checkSecrets": true,
+      "checkLargeFiles": true,
+      "maxFileSize": "10MB"
+    }
+  }
+}

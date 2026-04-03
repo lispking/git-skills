@@ -1,0 +1,44 @@
+{
+  "id": "git-skills",
+  "name": "Git Skills",
+  "version": "1.0.0",
+  "description": "智能 Git 辅助工具，提供分支管理、规范提交、PR 工作流和代码审查功能",
+  "author": {
+    "name": "lispking",
+    "url": "https://github.com/lispking"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/lispking/git-skills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lispking/git-skills.git"
+  },
+  "icon": "🌿",
+  "tags": ["git", "version-control", "productivity", "workflow", "commit-convention"],
+  "categories": ["productivity", "developer-tools"],
+  "rating": 4.8,
+  "downloads": 0,
+  "featured": false,
+  "pricing": "free",
+  "requirements": {
+    "claudeCodeVersion": ">=1.0.0"
+  },
+  "features": [
+    {
+      "title": "智能分支管理",
+      "description": "自动建议分支命名规范，快速创建/切换/清理分支"
+    },
+    {
+      "title": "规范提交助手",
+      "description": "自动生成符合 Conventional Commits 规范的提交信息"
+    },
+    {
+      "title": "PR 工作流辅助",
+      "description": "提供 PR 创建清单、自动同步主分支、冲突解决指南"
+    },
+    {
+      "title": "代码审查辅助",
+      "description": "检查变更范围、敏感信息、提交信息质量"
+    }
+  ]
+}
