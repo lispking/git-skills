@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "git-skills",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Claude Code plugin for Git skills with expert-level commit messages, branch management, and workflow guidance.",
   "owner": {
     "name": "lispking",
