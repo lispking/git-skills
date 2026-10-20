@@ -23,6 +23,30 @@ In Claude Code, run:
 
 ## Usage
 
+### Slash Command (Recommended)
+
+```
+/git-skills:commit
+```
+
+This single command applies the defaults that would otherwise need a long prompt:
+
+- Detailed **English** Conventional Commits with multi-paragraph bodies
+- **Auto-splits** unrelated changes into atomic commits
+- **No AI signatures** or `Co-Authored-By` lines
+- Commits immediately instead of only suggesting messages
+
+Add optional hints after the command to override any default:
+
+```
+/git-skills:commit scope: auth, include issue #123
+/git-skills:commit keep as one commit
+/git-skills:commit write messages in Chinese
+/git-skills:commit dry run
+```
+
+> In Claude Code, plugin commands are namespaced as `/git-skills:commit`. If your client also exposes unnamespaced commands, `/commit` may work too.
+
 ### Auto-trigger
 
 Git Skills activates automatically when these operations are detected:
@@ -31,7 +55,7 @@ Git Skills activates automatically when these operations are detected:
 - `git checkout -b` - Branch naming suggestions
 - `git merge` / `git rebase` - Conflict resolution guidance
 
-### Command Invocation
+### Natural Language
 
 Tell Claude what you want to do:
 
@@ -72,6 +96,8 @@ Show recent commit statistics
 
 **Expert-level requirements:**
 - Subject: specific, imperative mood, max 50 chars, no period
+- Language: **English by default** (override per request or in `.gitskills.json`)
+- Splitting: **unrelated changes are committed separately** by default
 - Body: **mandatory multi-paragraph** for all non-trivial changes
   - Paragraph 1: explain WHAT changed and WHY (motivation)
   - Paragraph 2: key implementation details, trade-offs, breaking changes
@@ -103,7 +129,9 @@ Create `.gitskills.json` in project root:
     "types": ["feat", "fix", "docs", "style", "refactor", "test", "chore"],
     "scopes": ["api", "ui", "auth", "db"],
     "requireScope": false,
-    "requireBody": true
+    "requireBody": true,
+    "language": "en",
+    "autoSplit": true
   },
   "branch": {
     "mainBranch": "main",
@@ -119,6 +147,8 @@ git-skills/
 ├── .claude-plugin/
 │   ├── plugin.json       # Plugin config (supports /plugin install)
 │   └── marketplace.json  # Marketplace display config
+├── commands/
+│   └── commit.md         # /git-skills:commit slash command
 ├── skills/
 │   └── git/
 │       └── SKILL.md      # Skill core documentation (official spec)
