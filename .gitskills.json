@@ -3,8 +3,11 @@
     "types": ["feat", "fix", "docs", "style", "refactor", "test", "chore", "perf", "ci"],
     "scopes": ["api", "ui", "auth", "db", "config", "deps"],
     "requireScope": false,
+    "requireBody": true,
     "maxSubjectLength": 50,
-    "maxBodyLength": 72
+    "maxBodyLength": 72,
+    "language": "en",
+    "autoSplit": true
   },
   "branch": {
     "mainBranch": "main",
