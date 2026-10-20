@@ -1,27 +1,100 @@
-# Claude Code
-.claude/
+# ============================================================
+# Git Skills - Ignore Rules
+# ============================================================
 
+# ---------- AI Assistant / Agent Local State ----------
+# Claude Code local settings and session data (keep .claude-plugin/ tracked)
+.claude/
+# AtomCode local workspace state
+.atomcode/
+# CodeBuddy local state
+.codebuddy/
+
+# ---------- OS Generated Files ----------
 # macOS
 .DS_Store
 .AppleDouble
 .LSOverride
+.Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
 
-# Editor files
-*.swp
-*.swo
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
 *~
+
+# ---------- Editors / IDEs ----------
 .vscode/
 .idea/
-*.sublime-*
+*.iml
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+.history/
+*.orig
+*.rej
 
-# Logs
+# ---------- Logs ----------
 *.log
 logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Temporary files
+# ---------- Temporary Files ----------
 tmp/
 temp/
 *.tmp
+*.temp
+*.bak
+*.cache
+.cache/
 
-# OS generated files
-Thumbs.db
+# ---------- Environment / Secrets ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.keystore
+
+# ---------- Node.js ----------
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/
+coverage/
+.nyc_output/
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------- Misc ----------
+*.pid
+*.seed
+*.tgz
+*.zip
