@@ -14,22 +14,44 @@ A powerful Claude Code Git assistant skill that provides intelligent branch mana
 
 ## Installation
 
-In Claude Code, run:
+### Claude Code
 
 ```bash
 /plugin marketplace add lispking/git-skills
 /plugin install git-skills
 ```
 
+### Qoder CLI
+
+```bash
+qoder plugins install /path/to/git-skills   # or: qoder plugins marketplace add lispking/git-skills
+```
+
+Restart Qoder or run `/plugins reload` to load the plugin.
+
+Qoder always namespaces plugin components, so the plugin command is `/git-skills:commit`. To also get the shorter `/git-commit` in every project, run the bundled installer once. It writes a thin user-level command that delegates to this skill:
+
+```bash
+bash scripts/install-git-commit.sh   # writes ~/.qoder/commands/git-commit.md
+```
+
+Then run `/commands` (or restart) to reload commands. Re-run with `--force` after upgrading to refresh the file; uninstall with `rm ~/.qoder/commands/git-commit.md`.
+
 ## Usage
 
 ### Slash Command (Recommended)
 
 ```
+/git-commit
+```
+
+or, without running the installer, the plugin's namespaced form:
+
+```
 /git-skills:commit
 ```
 
-This single command applies the defaults that would otherwise need a long prompt:
+Either command applies the defaults that would otherwise need a long prompt:
 
 - Detailed **English** Conventional Commits with multi-paragraph bodies
 - **Auto-splits** unrelated changes into atomic commits
@@ -39,13 +61,13 @@ This single command applies the defaults that would otherwise need a long prompt
 Add optional hints after the command to override any default:
 
 ```
-/git-skills:commit scope: auth, include issue #123
-/git-skills:commit keep as one commit
-/git-skills:commit write messages in Chinese
-/git-skills:commit dry run
+/git-commit scope: auth, include issue #123
+/git-commit keep as one commit
+/git-commit write messages in Chinese
+/git-commit dry run
 ```
 
-> In Claude Code, plugin commands are namespaced as `/git-skills:commit`. If your client also exposes unnamespaced commands, `/commit` may work too.
+> Claude Code and Qoder both namespace plugin commands as `/git-skills:commit`; `/git-commit` exists only after running `scripts/install-git-commit.sh` (Qoder) or when your client exposes unnamespaced commands.
 
 ### Auto-trigger
 
@@ -152,6 +174,8 @@ git-skills/
 ├── skills/
 │   └── git/
 │       └── SKILL.md      # Skill core documentation (official spec)
+├── scripts/
+│   └── install-git-commit.sh  # Installs the unnamespaced /git-commit command
 ├── .gitskills.json       # Configuration example
 └── README.md             # User documentation
 ```

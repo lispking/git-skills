@@ -1,6 +1,6 @@
 ---
 name: git-skills
-description: A comprehensive Git assistant skill that provides intelligent branch management, expert-level commit messages, workflow assistance, and code review guidance. Automatically activates for Git operations, commit requests (including "提交"), or when the user runs /git-commit (QoderCN) or /git-skills:commit (Claude Code).
+description: A comprehensive Git assistant skill that provides intelligent branch management, expert-level commit messages, workflow assistance, and code review guidance. Automatically activates for Git operations, commit requests (including "提交"), or when the user runs /git-commit or /git-skills:commit.
 ---
 
 # Git Skills
@@ -16,7 +16,7 @@ Activate this skill when the user:
 - Initiates Pull Requests
 - Encounters merge conflicts
 - Views Git history or statistics
-- Runs `/git-commit` (QoderCN) or `/git-skills:commit` (Claude Code)
+- Runs `/git-commit` or `/git-skills:commit`
 - Asks about Git workflows or conventions
 
 ## Branch Management
