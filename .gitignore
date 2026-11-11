@@ -9,6 +9,12 @@
 .atomcode/
 # CodeBuddy local state
 .codebuddy/
+# Qwen local state
+.qwen/
+# Qoder local state
+.qoder/
+# Qoder CN local state
+.qodercn/
 
 # ---------- OS Generated Files ----------
 # macOS
